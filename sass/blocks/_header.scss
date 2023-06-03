@@ -1,0 +1,110 @@
+@font-face {
+    font-family: fuente1;
+    src: url(../assets/fuentes/moderna.ttf);
+}
+
+
+.header {
+    background-color: rgba(0, 0, 0, 0.582);
+    display: grid; 
+    height: 67px;
+    grid-template-columns: 3fr 1fr; /* GRID CONTROL: POSICIONES INTERNAS DEL HEADER */
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+
+    &__section {
+
+        &__logo {
+            width: 60px;
+            margin-left: 15px;
+        }
+    }
+
+    &__nav {
+        position: relative;
+
+
+        &__img {
+            width: 40px;
+            height: 40px;
+
+        }
+
+        &__ul { /* POSICION DEL MENU HAMBURGUESA EMERGENTE */
+            position: absolute;
+            top: 125%;
+            right: 0.1px;
+            font-size: 20px;
+            font-family: fuente1;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            display: none;
+
+
+            &__li--nosotros {     
+                background-color: rgba(0, 0, 0, 0.582);
+                width: 160px;
+                display: flex;
+                justify-content: center;
+                height: 50px;
+                animation: deploy-menu-hamb 1s linear;
+
+                
+                
+               
+              
+                
+                
+                &__a {
+                    text-decoration: none;
+                    color: aliceblue;
+                   
+                  
+                }
+            }
+
+            &__li--hacemos {
+                background-color: rgba(0, 0, 0, 0.582); 
+                display: flex;
+                justify-content: center; 
+                animation: deploy-menu-hamb 1.2s linear;
+               
+
+                &__a {
+                    text-decoration: none;
+                    color: aliceblue;
+                   
+                }
+            }
+
+            &__li--contacto {
+                background-color: rgba(0, 0, 0, 0.582);  
+                display: flex;
+                justify-content: center;
+                animation: deploy-menu-hamb 1.4s linear;
+                border-bottom-left-radius: 1rem;
+             
+
+                &__a {
+                    text-decoration: none;
+                    color: aliceblue;
+                 
+                }
+            }
+}
+}
+}
+
+
+#menu-hamb:checked + .header__nav__ul  {
+    display: grid;
+}
+
+
+@keyframes deploy-menu-hamb {
+    0% {transform: translateX(160px);}
+    100% {transform: translateX(0);}
+}
+
