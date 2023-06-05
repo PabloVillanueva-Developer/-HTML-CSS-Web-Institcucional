@@ -39,7 +39,7 @@
   display: flex;
   justify-content: center;
   height: 50px;
-  animation: deploy-menu-hamb 1s linear;
+  animation: deploy-menu-hamb 0.5s linear;
 }
 .header__nav__ul__li--nosotros__a {
   text-decoration: none;
@@ -49,7 +49,7 @@
   background-color: rgba(0, 0, 0, 0.582);
   display: flex;
   justify-content: center;
-  animation: deploy-menu-hamb 1.2s linear;
+  animation: deploy-menu-hamb 0.7s linear;
 }
 .header__nav__ul__li--hacemos__a {
   text-decoration: none;
@@ -59,7 +59,7 @@
   background-color: rgba(0, 0, 0, 0.582);
   display: flex;
   justify-content: center;
-  animation: deploy-menu-hamb 1.4s linear;
+  animation: deploy-menu-hamb 0.9s linear;
   border-bottom-left-radius: 1rem;
 }
 .header__nav__ul__li--contacto__a {
@@ -102,12 +102,19 @@
   grid-template-rows: 0.6fr 4fr 3fr;
 }
 
+.body--backg-extendido {
+  background: url(../assets/images/fondo-pizza-extendido.png);
+  background-size: 1000px;
+  background-position-x: -400px;
+}
+
 .main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  align-items: center;
   justify-items: center;
+  justify-content: center;
+  height: 100%;
 }
 .main__section {
   width: 100%;
@@ -118,7 +125,71 @@
 }
 .main__section__tu-logo {
   width: 120px;
-  margin-top: 50%;
+  margin-top: 100%;
+}
+.main__section__tu-logo--productos {
+  width: 90px;
+  margin-top: 40%;
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.795);
+  display: grid;
+  grid-template-columns: 0.1fr;
+  grid-template-rows: repeat(11, 0.1fr);
+  justify-content: center;
+  margin: 0 auto;
+  justify-items: center;
+  width: 210px;
+  height: 100%;
+  gap: 2%;
+  border-radius: 1rem;
+  margin-top: 10px;
+}
+.section__div {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 1rem;
+  opacity: 100%;
+  transition: all 0.5s linear;
+  height: 170px;
+}
+.section__div__frontcard {
+  height: 150px;
+  border-radius: 1rem;
+  opacity: 100%;
+  z-index: 3;
+  position: relative;
+  transition: all 0.35s linear;
+}
+.section__div__backcard {
+  height: 155px;
+  width: 160px;
+  position: relative;
+  bottom: 153px;
+  background-color: rgba(0, 0, 0, 0.575);
+  border-radius: 1rem;
+  opacity: 100%;
+  transition: all 0.35s linear;
+  z-index: 2;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.575);
+  pointer-events: none;
+}
+.section__div__backcard__h3 {
+  font-size: 25px;
+  padding: 7px;
+  text-align: center;
+}
+
+.section__div__frontcard:hover ~ .section__div__backcard {
+  bottom: 125px;
+}
+
+.section__div__frontcard:hover {
+  transform: translateY(-19px);
 }
 
 .footer {
@@ -154,9 +225,15 @@
 }
 .footer__section__a--logo2 {
   animation: deploy-social-media 1.9s linear;
+  outline: none;
 }
 .footer__section__a--logo3 {
   animation: deploy-social-media 2.3s linear;
+  outline: none;
+}
+
+.footer__section__a:focus {
+  background-color: aliceblue;
 }
 
 @keyframes deploy-social-media {

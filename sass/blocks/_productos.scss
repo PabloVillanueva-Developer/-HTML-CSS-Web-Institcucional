@@ -1,0 +1,69 @@
+  
+
+.section {
+    background-color: rgba(0, 0, 0, 0.795);  
+    display: grid;
+    grid-template-columns: 0.1fr;
+    grid-template-rows: repeat(11, 0.1fr);
+    justify-content: center;
+    margin: 0 auto;
+    justify-items: center;
+    width: 210px;
+    height: 100%;
+    gap: 2%;
+    border-radius: 1rem;
+    margin-top: 10px;
+
+
+    &__div {
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 1rem;
+        opacity: 100%;
+        transition: all 0.5s linear;   
+        height: 170px;
+
+        &__frontcard {
+            height: 150px;
+            border-radius: 1rem;
+            opacity:    100%;
+            z-index: 3;
+            position: relative;           
+            transition: all 0.35s linear;  
+        }
+
+        &__backcard {
+            height: 155px;
+            width: 160px;
+            position: relative;
+            bottom: 153px;
+
+            background-color: rgba(0, 0, 0, 0.575);
+            border-radius: 1rem;
+            opacity: 100%;
+            transition: all 0.35s linear;
+            z-index: 2;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.575);
+            pointer-events: none;
+
+            &__h3 {
+                
+                font-size: 25px;
+                padding: 7px;    
+                text-align: center;                  
+            }
+        }
+    }
+}
+
+
+.section__div__frontcard:hover  ~ .section__div__backcard {
+    bottom: 125px;
+}
+
+.section__div__frontcard:hover  {
+   transform: translateY(-19px);      
+}

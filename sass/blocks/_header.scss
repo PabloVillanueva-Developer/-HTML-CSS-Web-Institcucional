@@ -24,11 +24,9 @@
     &__nav {
         position: relative;
 
-
         &__img {
             width: 40px;
             height: 40px;
-
         }
 
         &__ul { /* POSICION DEL MENU HAMBURGUESA EMERGENTE */
@@ -42,26 +40,17 @@
             grid-template-rows: repeat(3, 1fr);
             display: none;
 
-
             &__li--nosotros {     
                 background-color: rgba(0, 0, 0, 0.582);
                 width: 160px;
                 display: flex;
                 justify-content: center;
                 height: 50px;
-                animation: deploy-menu-hamb 1s linear;
+                animation: deploy-menu-hamb 0.5s linear;
 
-                
-                
-               
-              
-                
-                
                 &__a {
                     text-decoration: none;
                     color: aliceblue;
-                   
-                  
                 }
             }
 
@@ -69,7 +58,7 @@
                 background-color: rgba(0, 0, 0, 0.582); 
                 display: flex;
                 justify-content: center; 
-                animation: deploy-menu-hamb 1.2s linear;
+                animation: deploy-menu-hamb 0.7s linear;
                
 
                 &__a {
@@ -83,7 +72,7 @@
                 background-color: rgba(0, 0, 0, 0.582);  
                 display: flex;
                 justify-content: center;
-                animation: deploy-menu-hamb 1.4s linear;
+                animation: deploy-menu-hamb 0.9s linear;
                 border-bottom-left-radius: 1rem;
              
 

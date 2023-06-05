@@ -21,10 +21,13 @@
     display: grid;
     grid-template-columns: 1fr;/* GRID CONTROL: HEADER, MAIN, FOOTER */
     grid-template-rows: 0.6fr 4fr 3fr;
-    
+}
 
-
-
+.body--backg-extendido {
+    background: url(../assets/images/fondo-pizza-extendido.png);
+    background-size: 1000px;
+    background-position-x: -400px;
+ 
 }
 
 
@@ -32,9 +35,10 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    align-items: center;
     justify-items: center;
-
+    justify-content: center;
+    height: 100%;
+ 
     
     &__section {
         width: 100%;
@@ -46,7 +50,13 @@
 
         &__tu-logo {
             width: 120px;
-            margin-top: 50%;
+            margin-top: 100%;
+        }
+
+        &__tu-logo--productos {
+            width: 90px;
+            margin-top: 40%;
+
         }
 
 
