@@ -104,8 +104,8 @@
 
 .body--backg-extendido {
   background: url(../assets/images/fondo-pizza-extendido.png);
-  background-size: 1000px;
-  background-position-x: -400px;
+  background-size: 1300px;
+  background-position-x: -600px;
 }
 
 .main {
@@ -140,7 +140,7 @@
   justify-content: center;
   margin: 0 auto;
   justify-items: center;
-  width: 210px;
+  width: 70%;
   height: 100%;
   gap: 2%;
   border-radius: 1rem;
@@ -165,7 +165,7 @@
   height: 155px;
   width: 160px;
   position: relative;
-  bottom: 153px;
+  bottom: 150px;
   background-color: rgba(0, 0, 0, 0.575);
   border-radius: 1rem;
   opacity: 100%;
