@@ -20,15 +20,9 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr;/* GRID CONTROL: HEADER, MAIN, FOOTER */
-    grid-template-rows: 0.6fr 4fr 3fr;
+    grid-template-rows: 0.6fr 4fr 1.5fr;
 }
 
-.body--backg-extendido {
-    background: url(../assets/images/fondo-pizza-extendido.png);
-    background-size: 1300px;
-    background-position-x: -600px;
- 
-}
 
 
 .main {
@@ -45,12 +39,13 @@
         height: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 5%;
 
 
         &__tu-logo {
-            width: 120px;
-            margin-top: 100%;
+            width: 50%;
+
         }
 
         &__tu-logo--productos {

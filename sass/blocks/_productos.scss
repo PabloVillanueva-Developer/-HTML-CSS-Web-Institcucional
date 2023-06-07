@@ -1,46 +1,58 @@
   
+.productos__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.01fr 10fr 1fr;
+    background: url(../assets/images/fondo-pizza-extendido.png);
+    background-size: 1300px;
+    background-position-x: -500px;
+
+   
+
+}
+
+.productos__main {
+ 
+}
+
+
 
 .section {
     background-color: rgba(0, 0, 0, 0.795);  
     display: grid;
     grid-template-columns: 0.1fr;
-    grid-template-rows: repeat(11, 0.1fr);
+    grid-template-rows: repeat(11, 0.001fr);
     justify-content: center;
     margin: 0 auto;
     justify-items: center;
     width: 70%;
     height: 100%;
-    gap: 2%;
     border-radius: 1rem;
-    margin-top: 10px;
+    margin-top: 1rem;
+    gap: 4rem;
 
 
     &__div {
-        background-color: rgba(0, 0, 0, 0);
-        border-radius: 1rem;
-        opacity: 100%;
-        transition: all 0.5s linear;   
-        height: 170px;
+        position: relative; /* REFERENCIA PADRE DEL ABSOLUTE BACKCARD */
 
         &__frontcard {
-            height: 150px;
+            height: 12rem;
             border-radius: 1rem;
             opacity:    100%;
             z-index: 3;
             position: relative;           
+            top: 0.01rem;
             transition: all 0.35s linear;  
         }
 
         &__backcard {
-            height: 155px;
-            width: 160px;
-            position: relative;
-            bottom: 150px;
-
+            height: 12.7rem;
+            width: 13rem;
+            position: absolute;
+            bottom: 0;
             background-color: rgba(0, 0, 0, 0.575);
             border-radius: 1rem;
             opacity: 100%;
-            transition: all 0.35s linear;
             z-index: 2;
             color: aliceblue;
             display: flex;
@@ -48,6 +60,7 @@
             justify-content: end;
             box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.575);
             pointer-events: none;
+            transition: all 0.35s linear;
 
             &__h3 {
                 
@@ -56,14 +69,15 @@
                 text-align: center;                  
             }
         }
+        
     }
 }
 
 
 .section__div__frontcard:hover  ~ .section__div__backcard {
-    bottom: 125px;
+    transform: translateY(1rem);
 }
 
 .section__div__frontcard:hover  {
-   transform: translateY(-19px);      
+   transform: translateY(-2rem);      
 }
