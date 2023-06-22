@@ -1,87 +1,109 @@
-@font-face {
-  font-family: fuente1;
-  src: url(../assets/fuentes/moderna.ttf);
-}
-.header {
-  background-color: rgba(0, 0, 0, 0.582);
-  display: grid;
-  height: 67px;
-  grid-template-columns: 3fr 1fr; /* GRID CONTROL: POSICIONES INTERNAS DEL HEADER */
-  grid-template-rows: 1fr;
-  align-items: center;
-  justify-content: center;
-}
-.header__section__logo {
-  width: 60px;
-  margin-left: 15px;
-}
-.header__nav {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-}
-.header__nav__img {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-}
-.header__nav__ul { /* POSICION DEL MENU HAMBURGUESA EMERGENTE */
-  position: absolute;
-  top: 125%;
-  right: 0.1px;
-  font-size: 20px;
-  font-family: fuente1;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  display: none;
-}
-.header__nav__ul__li--nosotros {
-  background-color: rgba(0, 0, 0, 0.582);
-  width: 160px;
-  display: flex;
-  justify-content: center;
-  height: 50px;
-  animation: deploy-menu-hamb 0.5s linear;
-}
-.header__nav__ul__li--nosotros__a {
-  text-decoration: none;
-  color: aliceblue;
-}
-.header__nav__ul__li--hacemos {
-  background-color: rgba(0, 0, 0, 0.582);
-  display: flex;
-  justify-content: center;
-  animation: deploy-menu-hamb 0.7s linear;
-}
-.header__nav__ul__li--hacemos__a {
-  text-decoration: none;
-  color: aliceblue;
-}
-.header__nav__ul__li--contacto {
-  background-color: rgba(0, 0, 0, 0.582);
-  display: flex;
-  justify-content: center;
-  animation: deploy-menu-hamb 0.9s linear;
-  border-bottom-left-radius: 1rem;
-}
-.header__nav__ul__li--contacto__a {
-  text-decoration: none;
-  color: aliceblue;
-}
-
-#menu-hamb:checked + .header__nav__ul {
-  display: grid;
-}
-
-@keyframes deploy-menu-hamb {
-  0% {
-    transform: translateX(160px);
+@media (min-width: 320px) {
+  @font-face {
+    font-family: fuente1;
+    src: url(../assets/fuentes/moderna.ttf);
   }
-  100% {
-    transform: translateX(0);
+  .header {
+    background-color: rgba(0, 0, 0, 0.582);
+    display: grid;
+    height: 5rem;
+    grid-template-columns: 3fr 1fr; /* GRID CONTROL: POSICIONES INTERNAS DEL HEADER */
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__section__logo {
+    width: 3.75rem;
+    margin-left: 1rem;
+  }
+  .header__nav {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+  }
+  .header__nav__img {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .header__nav__ul { /* POSICION DEL MENU HAMBURGUESA EMERGENTE */
+    position: absolute;
+    top: 150%;
+    right: 0.01rem;
+    font-size: 1.2rem;
+    font-family: fuente1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    display: none;
+  }
+  .header__nav__ul__li--nosotros {
+    background-color: rgba(0, 0, 0, 0.582);
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    height: 4rem;
+    animation: deploy-menu-hamb 0.5s linear;
+  }
+  .header__nav__ul__li--nosotros__a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .header__nav__ul__li--hacemos {
+    background-color: rgba(0, 0, 0, 0.582);
+    display: flex;
+    justify-content: center;
+    animation: deploy-menu-hamb 0.7s linear;
+  }
+  .header__nav__ul__li--hacemos__a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .header__nav__ul__li--contacto {
+    background-color: rgba(0, 0, 0, 0.582);
+    display: flex;
+    justify-content: center;
+    animation: deploy-menu-hamb 0.9s linear;
+    border-bottom-left-radius: 1rem;
+  }
+  .header__nav__ul__li--contacto__a {
+    text-decoration: none;
+    color: aliceblue;
+  }
+  #menu-hamb:checked + .header__nav__ul {
+    display: grid;
+  }
+  @keyframes deploy-menu-hamb {
+    0% {
+      transform: translateX(160px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .header__nav__ul__li--nosotros {
+    width: 18rem;
+  }
+  .header__nav__ul__li--contacto {
+    width: 18rem;
+  }
+  .header__nav__ul__li--hacemos {
+    width: 18rem;
+  }
+}
+@media (min-width: 2000px) {
+  .header__nav__ul__li--nosotros {
+    width: 30rem;
+  }
+  .header__nav__ul__li--contacto {
+    width: 30rem;
+  }
+  .header__nav__ul__li--hacemos {
+    width: 30rem;
   }
 }
 * {
@@ -143,7 +165,7 @@
     background-size: cover;
   }
   .section {
-    background-color: rgba(0, 0, 0, 0.795);
+    background-color: rgba(0, 0, 0, 0.438);
     display: grid;
     grid-template-columns: 0.1fr;
     grid-template-rows: repeat(10, 0.001fr); /* GRID CONTROL: FILAS Y COLUNMAS DE PRODUCTO */
@@ -255,6 +277,9 @@
   }
 }
 @media (min-width: 1800px) {
+  .productos__body {
+    grid-template-rows: 1fr 5fr 4fr;
+  }
   .section {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 0.1fr);
@@ -311,6 +336,10 @@
   100% {
     transform: translatey(0);
   }
+}
+.main__section__googlemaps {
+  width: 80%;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

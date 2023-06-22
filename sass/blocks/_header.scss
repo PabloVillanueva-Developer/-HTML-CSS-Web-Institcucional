@@ -1,3 +1,7 @@
+@media (min-width: 320px) {
+    
+
+
 @font-face {
     font-family: fuente1;
     src: url(../assets/fuentes/moderna.ttf);
@@ -7,7 +11,7 @@
 .header {
     background-color: rgba(0, 0, 0, 0.582);
     display: grid; 
-    height: 67px;
+    height: 5rem;
     grid-template-columns: 3fr 1fr; /* GRID CONTROL: POSICIONES INTERNAS DEL HEADER */
     grid-template-rows: 1fr;
     align-items: center;
@@ -17,46 +21,49 @@
     &__section {
 
         &__logo {
-            width: 60px;
-            margin-left: 15px;
+            width: 3.75rem;
+            margin-left: 1rem;
         }
     }
 
     &__nav {
         position: relative;
-        z-index: 3;
+        z-index: 5;
         display: flex;
         justify-content: center;
         
         &__img {
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
             display: flex;
             justify-content: center;
         }
 
         &__ul { /* POSICION DEL MENU HAMBURGUESA EMERGENTE */
             position: absolute;
-            top: 125%;
-            right: 0.1px;
-            font-size: 20px;
+            top: 150%;
+            right: 0.01rem;
+            font-size: 1.2rem;
             font-family: fuente1;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
             display: none;
+      
 
             &__li--nosotros {     
                 background-color: rgba(0, 0, 0, 0.582);
-                width: 160px;
+                width: 10rem;
                 display: flex;
                 justify-content: center;
-                height: 50px;
+                height: 4rem;
                 animation: deploy-menu-hamb 0.5s linear;
+               
 
                 &__a {
                     text-decoration: none;
                     color: aliceblue;
+                   
                 }
             }
 
@@ -102,3 +109,34 @@
     100% {transform: translateX(0);}
 }
 
+}
+
+@media (min-width:1000px) {
+
+    .header__nav__ul__li--nosotros {
+        width: 18rem;
+    }
+
+    .header__nav__ul__li--contacto {
+        width: 18rem;
+    }
+
+    .header__nav__ul__li--hacemos {
+        width: 18rem;
+    } 
+}
+
+@media (min-width:2000px) {
+
+    .header__nav__ul__li--nosotros {
+        width: 30rem;
+    }
+
+    .header__nav__ul__li--contacto {
+        width: 30rem;
+    }
+
+    .header__nav__ul__li--hacemos {
+        width: 30rem;
+    } 
+}
