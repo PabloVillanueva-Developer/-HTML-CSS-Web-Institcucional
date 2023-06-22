@@ -12,6 +12,7 @@
     grid-template-rows: 1fr;
     align-items: center;
     justify-content: center;
+    
 
     &__section {
 
@@ -23,10 +24,15 @@
 
     &__nav {
         position: relative;
-
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        
         &__img {
             width: 40px;
             height: 40px;
+            display: flex;
+            justify-content: center;
         }
 
         &__ul { /* POSICION DEL MENU HAMBURGUESA EMERGENTE */
@@ -79,11 +85,10 @@
                 &__a {
                     text-decoration: none;
                     color: aliceblue;
-                 
                 }
             }
-}
-}
+        }    
+    }
 }
 
 

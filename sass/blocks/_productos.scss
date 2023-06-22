@@ -1,35 +1,37 @@
   
+@media (min-width:320px) {
+
 .productos__body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.01fr 10fr 1fr;
     background: url(../assets/images/fondo-pizza-extendido.png);
-    background-size: 1300px;
-    background-position-x: -500px;
 
-   
-
+    background-position-x: -1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .productos__main {
  
 }
 
-
-
 .section {
     background-color: rgba(0, 0, 0, 0.795);  
     display: grid;
     grid-template-columns: 0.1fr;
-    grid-template-rows: repeat(11, 0.001fr);
+    grid-template-rows: repeat(10, 0.001fr); /* GRID CONTROL: FILAS Y COLUNMAS DE PRODUCTO */
     justify-content: center;
     margin: 0 auto;
+    padding-top: 3rem;
     justify-items: center;
-    width: 70%;
+    width: 75%;
     height: 100%;
     border-radius: 1rem;
     margin-top: 1rem;
+    margin-bottom: 2rem;
     gap: 4rem;
+    position: relative; /* CONDICIONA AL POSITION ABSOLUTE DEL DIV-LEFTCARD */
 
 
     &__div {
@@ -61,23 +63,101 @@
             box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.575);
             pointer-events: none;
             transition: all 0.35s linear;
-
+    
             &__h3 {
-                
-                font-size: 25px;
+                font-size: 1.5rem;
                 padding: 7px;    
                 text-align: center;                  
             }
+
+            &__h3--font-size {
+                font-size: 1.3rem;
+            }
+        } 
+    }
+
+    &__div-hidden {
+        position: absolute;
+        bottom: 2.2rem;
+        height: 12.1rem;
+        width: 12.5rem;
+        background-color: rgba(0, 0, 0, 0.582);
+        transform: scale(0);
+        transition: all 0.35s linear;
+        z-index: 4;
+        border-radius: 1rem;   
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+        padding-left: 0.5rem;
+        font-weight: bold;
+        gap: 1.5rem;
+
+        &__li {
+            font-size: 22px;
+            color: aliceblue;
         }
-        
     }
 }
 
 
-.section__div__frontcard:hover  ~ .section__div__backcard {
+.section__div__frontcard:hover  + .section__div__backcard {
     transform: translateY(1rem);
 }
 
 .section__div__frontcard:hover  {
-   transform: translateY(-2rem);      
+    transform: translateY(-2rem);      
+}
+
+.section__div__frontcard:hover ~ .section__div-hidden{
+    transform: scale(100%);
+    pointer-events: none;
+}
+
+}
+
+@media (min-width: 800px) {
+
+    .section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 0.1fr);
+    }
+
+    .productos__body {
+        background-size: cover;
+        background-position: 0px;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .section {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(4, 0.1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .productos__body {
+        grid-template-rows: 1fr 10fr 3.5fr;
+        
+    }
+
+    .section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 0.1fr);
+    }
+
+}
+
+@media (min-width: 1800px) {
+
+    .section {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 0.1fr);
+        max-width: 95rem;
+    }
+
 }
